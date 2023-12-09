@@ -1,5 +1,6 @@
 package com.anith.load;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class LoadParagraph {
@@ -19,6 +20,9 @@ public class LoadParagraph {
   }
 
   private boolean validateFile(Path filePath) {
-    return true;
+    if (Files.exists(filePath) && Files.isRegularFile(filePath)) {
+      return true;
+    }
+    return false;
   }
 }

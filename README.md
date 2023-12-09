@@ -13,5 +13,7 @@ Steps
     * shortest word
     * non english word if any (bonus)
 
-# Build
+# Build and Run
 ``mvn clean package``
+
+``java -jar target/wordstat-1.0-SNAPSHOT-jar-with-dependencies.jar com.anith.stat.WordStat c:/myparagraph.txt``
