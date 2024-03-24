@@ -11,7 +11,7 @@ public class CleaningTest {
 
   @Before
   public void setup() {
-     cleansing = new Cleansing();
+    cleansing = new Cleansing();
   }
 
   @Test
@@ -19,6 +19,7 @@ public class CleaningTest {
     String actual = cleansing.cleanSpecialCharacters("How are you?, What a nice day!!!");
     Assert.assertEquals("How are you What a nice day", actual);
   }
+
   @Test
   public void cleanSpecialCharactersFailedTest() {
     String actual = cleansing.cleanSpecialCharacters("\"Anithkumar\",:Age;21");

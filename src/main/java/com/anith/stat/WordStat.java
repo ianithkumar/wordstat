@@ -12,16 +12,13 @@ public class WordStat {
 
   public static void main(String[] args) throws IOException {
 
-    if (args.length < 1) {
-      System.out.println("Input argument missing");
-      return;
-    }
-    String filePath = args[1];
-
+//    if (args.length < 1) {
+//      System.out.println("Input argument missing");
+//      return;
+//    }
+    String filePath = "C:\\Users\\anith\\OneDrive\\Documents\\wordstatpara.txt";
     LoadParagraph loadParagraph = new LoadParagraph();
     String paragraph = loadParagraph.load(Path.of(filePath));
-    System.out.println("The list which was read from the system");
-    System.out.println(paragraph);
     if (paragraph.isEmpty()) {
       System.err.println("Invalid file supplied");
       System.err.println(args[1] + " not found!");

@@ -22,17 +22,17 @@ public class CalculateTest {
   }
 
   public void leastWord() {
-    String actual = calculate.topWord(Arrays.asList("India", "USA", "Japan", "France", "India", "France"));
+    String actual = calculate.leastWord(Arrays.asList("India", "USA", "Japan", "France", "India", "France"));
     Assert.assertEquals("USA", actual);
   }
 
   public void longestWord() {
-    String actual = calculate.topWord(Arrays.asList("India", "USA", "Japan", "France", "India", "France"));
+    String actual = calculate.longestWord(Arrays.asList("India", "USA", "Japan", "France", "India", "France"));
     Assert.assertEquals("France", actual);
   }
 
   public void shortestWord() {
-    String actual = calculate.topWord(Arrays.asList("India", "USA", "Japan", "France", "India", "France"));
+    String actual = calculate.shortestWord(Arrays.asList("India", "USA", "Japan", "France", "India", "France"));
     Assert.assertEquals("USA", actual);
   }
 

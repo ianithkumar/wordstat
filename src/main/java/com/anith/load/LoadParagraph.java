@@ -5,32 +5,28 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
 
 public class LoadParagraph {
 
   public String load(Path filepath) throws IOException {
     // check if the file exist and is a regular file (readable)
     // load a file and return as a string
-    String paragraph = " ";
-    // TODO: implementation of file exists or not
+    BufferedReader reader;
+    String line = null;
     StringBuilder builder = new StringBuilder();
-    if (validateFile(filepath) == true) {
-      BufferedReader reader = null;
-      try {
-        reader = new BufferedReader(new FileReader(filepath.toFile()));
-        String line;
-        while ((line = reader.readLine()) != null) {
-          builder.append(line);
-        }
-        reader.close();
-      } catch (IOException e) {
-        e.printStackTrace();
+    try {
+      reader = new BufferedReader(new FileReader(filepath.toFile()));
+      while ((line = reader.readLine()) != null) {
+        builder.append(line);
       }
+      reader.close();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
-    // TODO: implement load a file, read line by line and return as a string
+    // TODO: implementation of file exists or not
+
     return builder.toString();
+    // TODO: implement load a file, read line by line and return as a string
   }
 
   protected boolean validateFile(Path filepath) {
