@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.anith</groupId>
-    <artifactId>wordstat</artifactId>
+    <artifactId>WordStat</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
