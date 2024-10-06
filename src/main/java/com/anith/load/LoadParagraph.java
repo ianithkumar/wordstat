@@ -11,6 +11,7 @@ public class LoadParagraph {
   public String load(Path filepath) throws IOException {
     // check if the file exist and is a regular file (readable)
     // load a file and return as a string
+    // TODO: Implementation of file exists or not
     BufferedReader reader;
     String line = null;
     StringBuilder builder = new StringBuilder();
@@ -23,10 +24,8 @@ public class LoadParagraph {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    // TODO: implementation of file exists or not
-
+    // TODO: Implement load a file, read line by line and return as a string
     return builder.toString();
-    // TODO: implement load a file, read line by line and return as a string
   }
 
   protected boolean validateFile(Path filepath) {

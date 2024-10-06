@@ -8,11 +8,10 @@ import java.util.stream.Collectors;
  * the least used word
  * the longest word
  * the shortest word
- * non english word if any (bonus)
  */
 public class Calculate {
-
   public String topWord(List<String> bagOfWords) {
+    // TODO: Calculate the top word
     String word = "";
     int maxFrequency = 0;
     for (String temp : bagOfWords) {
@@ -27,11 +26,11 @@ public class Calculate {
         maxFrequency = frequency;
       }
     }
-    // TODO: calculate the top word
     return word;
   }
 
   public String leastWord(List<String> bagOfWords) {
+    // TODO: Calculate the least used word
     String word = "";
     for (String temp : bagOfWords) {
       int frequency = 0;
@@ -44,29 +43,28 @@ public class Calculate {
         word = temp;
       }
     }
-    // TODO: calculate the least used word
     return word;
   }
 
   public String longestWord(List<String> bagOfWords) {
+    // TODO: Calculate the longest word
     String word = bagOfWords.get(0);
     for (String temp : bagOfWords) {
       if (temp.length() > word.length()) {
         word = temp;
       }
     }
-    // TODO: calculate the longest word
     return word;
   }
 
   public String shortestWord(List<String> bagOfWords) {
+    // TODO: Calculate the shortest word
     String word = bagOfWords.get(0);
     for (String temp : bagOfWords) {
       if (temp.length() < word.length()) {
         word = temp;
       }
     }
-    // TODO: calculate the shortest word
     return word;
   }
 }

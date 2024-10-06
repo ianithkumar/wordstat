@@ -12,16 +12,11 @@ public class WordStat {
 
   public static void main(String[] args) throws IOException {
 
-//    if (args.length < 1) {
-//      System.out.println("Input argument missing");
-//      return;
-//    }
     String filePath = "C:\\Users\\anith\\OneDrive\\Documents\\wordstatpara.txt";
     LoadParagraph loadParagraph = new LoadParagraph();
     String paragraph = loadParagraph.load(Path.of(filePath));
     if (paragraph.isEmpty()) {
       System.err.println("Invalid file supplied");
-      System.err.println(args[1] + " not found!");
       return;
     }
     Cleansing cleansing = new Cleansing();
@@ -34,7 +29,6 @@ public class WordStat {
     System.out.println("least word   : " + calculate.leastWord(cleanedWords));
     System.out.println("longest word : " + calculate.longestWord(cleanedWords));
     System.out.println("shortest word: " + calculate.shortestWord(cleanedWords));
-
   }
 
   private static List<String> tokenize(String paragraph) {
